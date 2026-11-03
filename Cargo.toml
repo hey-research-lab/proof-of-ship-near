@@ -1,0 +1,30 @@
+[workspace]
+resolver = "2"
+members = ["contract", "mocks/mock-ft", "mocks/mock-intents", "integration-tests"]
+
+[workspace.package]
+edition = "2021"
+license = "MIT"
+rust-version = "1.93"
+repository = "https://github.com/hey-research-lab/proof-of-ship-near"
+
+[workspace.dependencies]
+near-sdk = "=5.29.1"
+near-contract-standards = "=5.29.1"
+
+[profile.release]
+codegen-units = 1
+opt-level = "z"
+lto = true
+debug = false
+panic = "abort"
+overflow-checks = true
+
+# Small target dirs: no debug info for host builds and tests.
+[profile.dev]
+debug = 0
+incremental = false
+
+[profile.test]
+debug = 0
+incremental = false

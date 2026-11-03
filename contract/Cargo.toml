@@ -1,0 +1,21 @@
+[package]
+name = "ship-escrow"
+description = "Proof of Ship on NEAR: a NEP-141 bounty escrow that pays a builder when HEY Research Lab signs that the project shipped"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+near-sdk = { workspace = true, features = ["unstable"] }
+near-contract-standards = { workspace = true }
+hex = "0.4"
+
+[dev-dependencies]
+near-sdk = { workspace = true, features = ["unit-testing", "unstable"] }
+k256 = { version = "0.13", features = ["ecdsa"] }
+serde_json = "1"

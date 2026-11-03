@@ -1,0 +1,9 @@
+{
+  "name": "proof-of-ship-near-scripts",
+  "private": true,
+  "type": "module",
+  "description": "Sign test attestations exactly as HEY Research Lab does, for the NEAR ShipEscrow",
+  "dependencies": {
+    "viem": "2.21.54"
+  }
+}
