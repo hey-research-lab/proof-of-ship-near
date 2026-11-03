@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-label="What a claim cannot do. Refused, each by a unit test: replay, a high-s twin signature, a Robinhood Chain signature, a testnet signature on mainnet, another escrow's signature, a wrong attester, a tampered count, below target, a stale or future attestation, a wrong window, a wrong builder or project, and a claim after the deadline plus 3 days. Not claimed in time, each funder refunds exactly what it put in.">
+<style>.p{animation:pulse 3.5s ease-in-out infinite}@keyframes pulse{50%{opacity:.35}}@media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>
+<rect width="1200" height="720" rx="14" fill="#0B0E11"/>
+<text x="40" y="50" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-size="13" letter-spacing="2" fill="#C2FB03">WHAT A CLAIM CANNOT DO</text>
+<text x="40" y="76" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="15" fill="#94A0AD">The escrow trusts one EVM key, fixed at init. Every refusal below is a unit test, and none of it has an admin override.</text>
+<rect x="24" y="96" width="1152" height="56" rx="10" fill="#14181D" stroke="#272D35"/>
+<text x="42" y="120" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-size="12" letter-spacing="1.5" fill="#94A0AD">SIGNING DOMAIN</text>
+<text x="42" y="140" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#E9ECF0">name "HEY Proof of Ship" · version "1" · chainId <tspan fill="#C2FB03">397</tspan> (testnet 398) · salt <tspan fill="#C2FB03">keccak256(escrow account id)</tspan></text>
+<g><rect x="24.0" y="168" width="277.5" height="128" rx="10" fill="#14181D" stroke="#272D35"/>
+<text x="42.0" y="200" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" font-weight="700" fill="#E9ECF0">Replay</text>
+<text x="42.0" y="224" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">The same claim again, before or</text><text x="42.0" y="242" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">after the payout.</text>
+<rect class="p" style="animation-delay:-0.00s" x="42.0" y="278" width="5" height="5" rx="2.5" fill="#C2FB03"/>
+<text x="54.0" y="284" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-size="11.5" fill="#C2FB03">ERR_ALREADY_CLAIMED</text></g>
+<g><rect x="315.5" y="168" width="277.5" height="128" rx="10" fill="#14181D" stroke="#272D35"/>
+<text x="333.5" y="200" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" font-weight="700" fill="#E9ECF0">High-s twin</text>
+<text x="333.5" y="224" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">The other valid signature of the</text><text x="333.5" y="242" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">same key (EIP-2), refused before</text><text x="333.5" y="260" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">ecrecover.</text>
+<rect class="p" style="animation-delay:-0.45s" x="333.5" y="278" width="5" height="5" rx="2.5" fill="#C2FB03"/>
+<text x="345.5" y="284" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-size="11.5" fill="#C2FB03">ERR_HIGH_S</text></g>
+<g><rect x="607.0" y="168" width="277.5" height="128" rx="10" fill="#14181D" stroke="#272D35"/>
+<text x="625.0" y="200" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" font-weight="700" fill="#E9ECF0">Robinhood Chain signature</text>
+<text x="625.0" y="224" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">A count signed for chain 4663 with</text><text x="625.0" y="242" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">a verifyingContract.</text>
+<rect class="p" style="animation-delay:-0.90s" x="625.0" y="278" width="5" height="5" rx="2.5" fill="#C2FB03"/>
+<text x="637.0" y="284" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-size="11.5" fill="#C2FB03">ERR_WRONG_SIGNER</text></g>
+<g><rect x="898.5" y="168" width="277.5" height="128" rx="10" fill="#14181D" stroke="#272D35"/>
+<text x="916.5" y="200" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" font-weight="700" fill="#E9ECF0">Testnet on mainnet</text>
+<text x="916.5" y="224" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">A chain 398 signature sent to a</text><text x="916.5" y="242" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">chain 397 escrow.</text>
+<rect class="p" style="animation-delay:-1.35s" x="916.5" y="278" width="5" height="5" rx="2.5" fill="#C2FB03"/>
+<text x="928.5" y="284" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-size="11.5" fill="#C2FB03">ERR_WRONG_SIGNER</text></g>
+<g><rect x="24.0" y="310" width="277.5" height="128" rx="10" fill="#14181D" stroke="#272D35"/>
+<text x="42.0" y="342" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" font-weight="700" fill="#E9ECF0">Another escrow</text>
+<text x="42.0" y="366" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">A signature salted with another</text><text x="42.0" y="384" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">escrow’s account id.</text>
+<rect class="p" style="animation-delay:-1.80s" x="42.0" y="420" width="5" height="5" rx="2.5" fill="#C2FB03"/>
+<text x="54.0" y="426" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-size="11.5" fill="#C2FB03">ERR_WRONG_SIGNER</text></g>
+<g><rect x="315.5" y="310" width="277.5" height="128" rx="10" fill="#14181D" stroke="#272D35"/>
+<text x="333.5" y="342" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" font-weight="700" fill="#E9ECF0">Wrong attester</text>
+<text x="333.5" y="366" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">Any key but the one address fixed</text><text x="333.5" y="384" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">at init.</text>
+<rect class="p" style="animation-delay:-2.25s" x="333.5" y="420" width="5" height="5" rx="2.5" fill="#C2FB03"/>
+<text x="345.5" y="426" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-size="11.5" fill="#C2FB03">ERR_WRONG_SIGNER</text></g>
+<g><rect x="607.0" y="310" width="277.5" height="128" rx="10" fill="#14181D" stroke="#272D35"/>
+<text x="625.0" y="342" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" font-weight="700" fill="#E9ECF0">Tampered count</text>
+<text x="625.0" y="366" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">Ships raised after HEY signed.</text>
+<rect class="p" style="animation-delay:-2.70s" x="625.0" y="420" width="5" height="5" rx="2.5" fill="#C2FB03"/>
+<text x="637.0" y="426" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-size="11.5" fill="#C2FB03">ERR_WRONG_SIGNER</text></g>
+<g><rect x="898.5" y="310" width="277.5" height="128" rx="10" fill="#14181D" stroke="#272D35"/>
+<text x="916.5" y="342" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" font-weight="700" fill="#E9ECF0">Below target</text>
+<text x="916.5" y="366" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">Fewer ships than the bounty’s</text><text x="916.5" y="384" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">min_ships.</text>
+<rect class="p" style="animation-delay:-3.15s" x="916.5" y="420" width="5" height="5" rx="2.5" fill="#C2FB03"/>
+<text x="928.5" y="426" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-size="11.5" fill="#C2FB03">ERR_NOT_ENOUGH_SHIPS</text></g>
+<g><rect x="24.0" y="452" width="277.5" height="128" rx="10" fill="#14181D" stroke="#272D35"/>
+<text x="42.0" y="484" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" font-weight="700" fill="#E9ECF0">Stale or future</text>
+<text x="42.0" y="508" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">Signed more than a day ago, or</text><text x="42.0" y="526" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">dated ahead of the block.</text>
+<rect class="p" style="animation-delay:-3.60s" x="42.0" y="562" width="5" height="5" rx="2.5" fill="#C2FB03"/>
+<text x="54.0" y="568" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-size="11.5" fill="#C2FB03">ERR_STALE_ATTESTATION</text></g>
+<g><rect x="315.5" y="452" width="277.5" height="128" rx="10" fill="#14181D" stroke="#272D35"/>
+<text x="333.5" y="484" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" font-weight="700" fill="#E9ECF0">Wrong window</text>
+<text x="333.5" y="508" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">Not from the bounty’s start, or</text><text x="333.5" y="526" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">ending after the deadline or</text><text x="333.5" y="544" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">issuedAt.</text>
+<rect class="p" style="animation-delay:-4.05s" x="333.5" y="562" width="5" height="5" rx="2.5" fill="#C2FB03"/>
+<text x="345.5" y="568" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-size="11.5" fill="#C2FB03">ERR_WRONG_WINDOW</text></g>
+<g><rect x="607.0" y="452" width="277.5" height="128" rx="10" fill="#14181D" stroke="#272D35"/>
+<text x="625.0" y="484" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" font-weight="700" fill="#E9ECF0">Wrong builder or project</text>
+<text x="625.0" y="508" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">Another payout address, or another</text><text x="625.0" y="526" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">HEY slug.</text>
+<rect class="p" style="animation-delay:-4.50s" x="625.0" y="562" width="5" height="5" rx="2.5" fill="#C2FB03"/>
+<text x="637.0" y="568" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-size="11.5" fill="#C2FB03">ERR_WRONG_BUILDER · _PROJECT</text></g>
+<g><rect x="898.5" y="452" width="277.5" height="128" rx="10" fill="#14181D" stroke="#272D35"/>
+<text x="916.5" y="484" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" font-weight="700" fill="#E9ECF0">Too late</text>
+<text x="916.5" y="508" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">After the deadline plus the 3-day</text><text x="916.5" y="526" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#94A0AD">claim grace.</text>
+<rect class="p" style="animation-delay:-4.95s" x="916.5" y="562" width="5" height="5" rx="2.5" fill="#C2FB03"/>
+<text x="928.5" y="568" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-size="11.5" fill="#C2FB03">ERR_CLAIM_CLOSED</text></g>
+<rect x="24" y="600" width="1152" height="76" rx="10" fill="rgba(194,251,3,0.16)" stroke="#C2FB03"/>
+<text x="42" y="632" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" font-weight="700" fill="#E9ECF0">Nothing shipped in time? Every funder takes back exactly what it put in.</text>
+<text x="42" y="656" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" fill="#94A0AD">refund(id) opens after the deadline plus 3 days. Refunding twice, refunding early or refunding a verified bounty is refused; so is funding with another token or after the deadline.</text>
+<text x="40" y="704" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-size="12" fill="#94A0AD">50 unit tests (19 named "refused") and 3 sandbox tests on a local NEAR node, run by CI on every push.</text>
+</svg>
