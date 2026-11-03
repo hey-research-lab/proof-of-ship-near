@@ -1,0 +1,15 @@
+[package]
+name = "mock-ft"
+description = "A plain NEP-141 token for the sandbox tests (near-contract-standards, USDC-like: 6 decimals, 0.00125 NEAR storage)"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+publish = false
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+near-sdk = { workspace = true }
+near-contract-standards = { workspace = true }
