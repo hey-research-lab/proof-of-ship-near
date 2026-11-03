@@ -1,0 +1,33 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          persist-credentials: false
+      - name: Rust 1.93.0 with wasm32 (rust-toolchain.toml)
+        run: rustup show && rustc --version
+      - uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6 # v2.9.2
+      - name: Install cargo-near 0.22.0
+        run: curl --proto '=https' --tlsv1.2 -LsSf https://github.com/near/cargo-near/releases/download/cargo-near-v0.22.0/cargo-near-installer.sh | sh
+      - name: Format
+        run: cargo fmt --all -- --check
+      - name: EIP-712 vectors are reproducible with viem
+        run: |
+          npm ci --prefix scripts --no-audit --no-fund
+          node scripts/vectors.mjs > /dev/null
+          git diff --exit-code contract/src/vectors.json
+      - name: Unit tests
+        run: cargo test -p ship-escrow --locked
+      - name: Build wasm
+        run: ./scripts/build.sh
+      - name: Sandbox tests (near-workspaces)
+        run: cargo test -p integration-tests --locked -- --test-threads=1
