@@ -1,7 +1,7 @@
 <a href="https://nearblocks.io/address/escrow.heyresearch.near">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-    <img alt="Proof of Ship on NEAR, by Hey Research Lab: get paid for shipping, on evidence anyone can check" src="assets/hero-light.svg" width="100%">
+    <img alt="Proof of Ship on NEAR, by HEY Research Lab: get paid for shipping, on evidence anyone can check" src="assets/hero-light.svg" width="100%">
   </picture>
 </a>
 
@@ -15,7 +15,7 @@
 
 <p align="center">
   A bounty escrow that pays builders for shipping, not for promising. Anyone locks USDC on NEAR behind a project.<br>
-  It is released only when <a href="https://heyresearch.xyz">Hey Research Lab</a> (HEY) signs that it counted at least the bounty's target<br>
+  It is released only when <a href="https://heyresearch.xyz">HEY Research Lab</a> (HEY) signs that it counted at least the bounty's target<br>
   number of ships, each with its public source. The escrow checks that signature on chain with <code>env::ecrecover</code>.<br>
   No target by the deadline? Every funder takes back exactly what they put in.
 </p>
@@ -45,8 +45,10 @@
 | **The same attester on Robinhood Chain** | [`ShipEscrow` 0x3Da1…25f2](https://robinhoodchain.blockscout.com/address/0x3Da17a89F1d29aB96419269514C798a8dd6125f2) trusts the same key, `0x2b30…5760`, and already pays builders in $WIF ([hey-research-lab/proof-of-ship](https://github.com/hey-research-lab/proof-of-ship)) |
 | **The page** | [hey-research-lab.github.io/proof-of-ship](https://hey-research-lab.github.io/proof-of-ship/), with the [NEAR option on the page](https://hey-research-lab.github.io/proof-of-ship/) |
 
-The mainnet escrow still holds its full-access key: until the operator deletes it (see [Deploy](#deploy)), trust the
-operator as well as the code ([SECURITY.md](SECURITY.md)). The `list-keys` row below shows its state at any time.
+The mainnet escrow has had no access keys since 10 November 2026, when the operator deleted its full-access key
+([the transaction](https://nearblocks.io/txns/7vLPeq3DpnZT3tstqtuo4GoD5W48R25QwPKgX8sdaCsT)): nobody, HEY included, can
+redeploy its code, and the guardian `heyresearch.near` can still only retire it. The `list-keys` row below shows its
+state at any time.
 
 ## Why
 
@@ -98,7 +100,7 @@ curl --proto '=https' --tlsv1.2 -LsSf https://github.com/near/near-cli-rs/releas
 | Do | See |
 | :-- | :-- |
 | `near contract call-function as-read-only escrow.heyresearch.near get_config json-args '{}' network-config mainnet now` | `"attester": "0x2b309b352ff49d04912ca34984b27a5481325760"`, `"chain_id": 397`, `"salt": "0xce8386c1…b9bded62"` (`keccak256("escrow.heyresearch.near")`), `"guardian": "heyresearch.near"`, `"intents": "intents.near"`, `"retired": false`, the USDC token `17208628…36133a1` |
-| `near account list-keys escrow.heyresearch.near network-config mainnet now` | The account's access keys: one full-access key as of 4 November 2026, none once the operator deletes them |
+| `near account list-keys escrow.heyresearch.near network-config mainnet now` | The account's access keys: no keys since 10 November 2026 |
 
 The testnet escrow trusts a **public test key**, `keccak256("hey-proof-of-ship-near test attester")` (address
 `0x77F4b5aC68a7fcB5008ff585b812f4b0231043A9`), so that anyone can sign its attestations and try the flow. A mainnet
@@ -326,4 +328,4 @@ full-access keys (`near account delete-keys`) so that nobody, HEY included, can 
   commit SHA).
 - **Pictures:** the SVGs in `assets/` are drawn by `node scripts/visuals.mjs`, with no dependency.
 
-<p align="center"><sub>By <a href="https://heyresearch.xyz">Hey Research Lab</a> · <a href="SECURITY.md">Security</a> · <a href="LICENSE">MIT</a> · Not financial advice</sub></p>
+<p align="center"><sub>By <a href="https://heyresearch.xyz">HEY Research Lab</a> · <a href="SECURITY.md">Security</a> · <a href="LICENSE">MIT</a> · Not financial advice</sub></p>
