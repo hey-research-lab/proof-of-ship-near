@@ -178,6 +178,8 @@ and on a sandbox node the three tests in `integration-tests/tests/escrow.rs`.
 - **Trust and reporting:** what the escrow trusts, and how to report a vulnerability privately, is in
   [SECURITY.md](SECURITY.md).
 
+HEY Research Lab also reviews other projects' code and reports what it finds privately first: [security credits](https://github.com/hey-research-lab#security-credits).
+
 ## The attestation HEY signs
 
 EIP-712, with a domain bound to NEAR and to one escrow account:
